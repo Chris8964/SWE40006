@@ -17,6 +17,8 @@ if (isset($_POST['submit'])) {
   } elseif ($operator == 'divide') {
     $result = $num1 / $num2;
   }
+
+  $num1 = $_POST['num
 } ?>
 
 <form action="calculator.php" method="post">
