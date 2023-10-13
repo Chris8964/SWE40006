@@ -18,7 +18,7 @@ if (isset($_POST['submit'])) {
     $result = $num1 / $num2;
   }
 
-  $num1 = $_POST['num
+  $num1 = $_POST['num'];
 } ?>
 
 <form action="calculator.php" method="post">
