@@ -32,7 +32,7 @@ pipeline {
 
                 sh "git merge ${BRANCH_TO_BE_MERGED}"
 
-                sh 'git push origin master'
+                sh 'git push'
             }
         }
         /*
