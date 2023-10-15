@@ -1,5 +1,5 @@
 <?php
-echo "Goodbye there :(";
+echo "Goodbye there :( :(";
 // Check if the form has been submitted
 if (isset($_POST['submit'])) {
   // Get the values from the form
@@ -18,7 +18,7 @@ if (isset($_POST['submit'])) {
     $result = $num1 / $num2;
   }
 
-  $num1 = $_POST['num';
+  $num1 = $_POST['num'];
 } ?>
 
 <form action="calculator.php" method="post">
