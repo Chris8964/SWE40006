@@ -8,6 +8,7 @@ pipeline {
                     git 'https://github.com/Chris8964/SWE40006.git'
                     checkout scm
                 }
+                sh 'git branch -a'
             }
         }
         
