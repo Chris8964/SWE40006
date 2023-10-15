@@ -27,7 +27,11 @@ pipeline {
         stage('Merge Pull Request') {
             steps {
                 sh 'git checkout master'
-                sh "git merge ${scm}"
+
+                script{
+                    merge scm
+                }
+
                 sh 'git push -u origin master'
             }
         }
