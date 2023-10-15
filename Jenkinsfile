@@ -24,11 +24,10 @@ pipeline {
         }
 
         stage('Merge Pull Request') {
+            environment {
+                BRANCH_TO_BE_MERGED = env.BRANCH_NAME
+            }
             steps {
-                environment {
-                    BRANCH_TO_BE_MERGED = env.BRANCH_NAME
-                }
-                
                 sh 'git checkout master'
 
                 sh "git merge ${BRANCH_TO_BE_MERGED}"
