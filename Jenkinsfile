@@ -22,6 +22,18 @@ pipeline {
                 sh 'vendor/bin/phpstan analyse src/'
             }
         }
+
+        stage('Merge Pull Request') {
+            steps {
+                sh 'git checkout master'
+
+                script{
+                    merge scm
+                }
+
+                sh 'git push -u origin master'
+            }
+        }
         /*
         stage('Install Prerequisites') {
             environment {
