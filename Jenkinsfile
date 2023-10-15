@@ -28,6 +28,7 @@ pipeline {
                 BRANCH_TO_BE_MERGED = "${env.BRANCH_NAME}"
             }
             steps {
+                sh 'git branch -a'
                 sh 'git checkout master'
 
                 sh "git merge ${BRANCH_TO_BE_MERGED}"
