@@ -6,6 +6,7 @@ pipeline {
             steps {
                 script {
                     git 'https://github.com/Chris8964/SWE40006.git'
+                    checkout scm
                 }
             }
         }
