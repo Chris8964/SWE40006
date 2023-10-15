@@ -8,6 +8,7 @@ pipeline {
                     git 'https://github.com/Chris8964/SWE40006.git'
                     checkout scm
                 }
+                sh 'git branch -a'
             }
         }
         
@@ -20,6 +21,18 @@ pipeline {
         stage('Run PHPStan tests') {
             steps {
                 sh 'vendor/bin/phpstan analyse src/'
+            }
+        }
+
+        stage('Merge Pull Request') {
+            steps {
+                sh 'git checkout master'
+
+                script{
+                    merge scm
+                }
+
+                sh 'git push -u origin master'
             }
         }
         /*
