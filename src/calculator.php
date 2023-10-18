@@ -1,5 +1,5 @@
 <?php
-echo "Hello :)";
+echo "Hi there :)";
 // Check if the form has been submitted
 if (isset($_POST['submit'])) {
   // Get the values from the form
